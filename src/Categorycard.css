@@ -1,0 +1,48 @@
+.Categorycard
+{
+    width: 150px;
+    height: 150px;
+    margin: 0;
+}
+
+.cc__container
+{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+}
+
+.cc__image
+{
+    width: 120px;
+    height: 120px;
+    padding-right: 10px;
+    border-bottom: 1px solid lightgrey;
+} 
+
+.cc__image > img
+{
+    padding-right: 10px;
+    width: 150px;
+    height: auto;
+    object-fit: fill;
+}
+
+.cc__title
+{
+    /* width: 100px; */
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+
+}
+
+.cc__title > h5
+{
+    align-items: center;
+    justify-self: center;
+}
