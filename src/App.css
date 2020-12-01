@@ -270,3 +270,11 @@ input[type="number"]::placeholder {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
+.grid_container
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+
+}
