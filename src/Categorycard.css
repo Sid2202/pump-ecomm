@@ -1,48 +1,33 @@
-.Categorycard
-{
-    width: 150px;
-    height: 150px;
-    margin: 0;
-}
-
 .cc__container
 {
-    display: flex;
-    flex-direction: column;
-    width: 150px;
-    height: 150px;
-    align-items: center;
-    border: 1px solid lightgrey;
+    background-color: white;
+    max-width: 150px;
+    border: 1px solid lightgray;
     border-radius: 15px;
+    box-shadow: 0px 1px 5px 1px lightgray;
 }
 
 .cc__image
 {
-    width: 120px;
-    height: 120px;
-    padding-right: 10px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 0.01px solid lightgray;
 } 
 
 .cc__image > img
 {
-    padding-right: 10px;
-    width: 150px;
-    height: auto;
-    object-fit: fill;
+    width: 140px;
+    object-fit: contain;
+    border: 0.01px;
+    border-radius:15px;
 }
 
 .cc__title
 {
-    /* width: 100px; */
-    align-items: center;
-    justify-content: center;
+    
     padding: 2px;
-
+    align-items: center;
 }
 
 .cc__title > h5
 {
-    align-items: center;
-    justify-self: center;
+    text-align: center;
 }

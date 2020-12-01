@@ -36,16 +36,16 @@ function soborewell() {
     .catch(err => console.log(err))
   }
 
-  $('[lang="ka"]').hide();
+  $('[lang="ka" id="ka"]').hide();
 
 const myFunctionka = () => {
  
-  $('[lang="en"]').hide();
-  $('[lang="ka"]').show();
+  $('[lang="en" id="en"]').hide();
+  $('[lang="ka" id="ka"]').show();
 }
 const myFunctionen = () =>{
-  $('[lang="ka"]').hide();
-  $('[lang="en"]').show();
+  $('[lang="ka" id="ka"]').hide();
+  $('[lang="en" id="en"]').show();
 }
 
 
@@ -69,8 +69,8 @@ const myFunctionen = () =>{
              
           </div>
         <h5>
-          <span lang="en">Domestic Sump / Open Well Pump Selection</span>
-          <span lang="ka">
+          <span lang="en" id="en">Domestic Sump / Open Well Pump Selection</span>
+          <span lang="ka" id="ka">
             ಗೃಹ ಮತ್ತು ವಸತಿ ನಿಲಯಕ್ಕೆ ತೊಟ್ಟಿ / ತೆರೆದ ಭಾವಿ ಪಂಪಿನ ಆಯ್ಕೆ
           </span>
         </h5>
@@ -81,29 +81,29 @@ const myFunctionen = () =>{
         <form action="soborewell.php">
           <div className="card">
             <div className="forminput">
-              <h5 lang="ka">ನೀರಿನ ಅವಶ್ಯಕತೆ ದಿನಕ್ಕೆ ಲೀಟರ್ಗಳಲ್ಲಿ</h5>
-              <h5 lang="en">Total Water Required per day</h5>
+              <h5 lang="ka" id="ka">ನೀರಿನ ಅವಶ್ಯಕತೆ ದಿನಕ್ಕೆ ಲೀಟರ್ಗಳಲ್ಲಿ</h5>
+              <h5 lang="en" id="en">Total Water Required per day</h5>
               &emsp;
               <div className="input-suffix">
                 <input type="number"   className="" name="totalwater" onChange={async (e) => setwaterreq(e.target.value)} />
                 <h6>
-                  <strong lang="en">in litres</strong>
-                  <strong lang="ka">ಲೀಟರ್ಗಳಲ್ಲಿ</strong>
+                  <strong lang="en" id="en">in litres</strong>
+                  <strong lang="ka" id="ka">ಲೀಟರ್ಗಳಲ್ಲಿ</strong>
                 </h6>
               </div>
             </div>
 
             <div className="forminput">
-              <h5 lang="ka">
+              <h5 lang="ka" id="ka">
                 ಒಟ್ಟು ಎಷ್ಟು ಎತ್ತರಕ್ಕೆ ನೀರನ್ನು ಎತ್ತಬೇಕು ಮೀಟರ್ಗಳಲ್ಲಿ
               </h5>
-              <h5 lang="en">Total Height to be pumped</h5>
+              <h5 lang="en" id="en">Total Height to be pumped</h5>
               &emsp;
               <div className="input-suffix" >
                 <input type="number" className="" onChange={async (e) => setHeight(e.target.value)}/>
                 <h6 >
-                  <strong lang="en">in metres</strong>
-                  <strong lang="ka">ಮೀಟರ್ಗಳಲ್ಲಿ</strong>
+                  <strong lang="en" id="en">in metres</strong>
+                  <strong lang="ka" id="ka">ಮೀಟರ್ಗಳಲ್ಲಿ</strong>
                 </h6>
               </div>
             </div>
@@ -111,29 +111,29 @@ const myFunctionen = () =>{
             
           <div className="card">
             <div className="formradio">
-              <h4 lang="ka">ನೀರಿನ ಅವಶ್ಯಕತೆ ದಿನಕ್ಕೆ ಲೀಟರ್ಗಳಲ್ಲಿ</h4>
-              <h4 lang="en" >Power Supply available</h4>
+              <h4 lang="ka" id="ka">ನೀರಿನ ಅವಶ್ಯಕತೆ ದಿನಕ್ಕೆ ಲೀಟರ್ಗಳಲ್ಲಿ</h4>
+              <h4 lang="en" id="en" >Power Supply available</h4>
               <h6 >*Select Any One</h6>
               &emsp;
 
               <div className="radioinput">
-                <span lang="ka">ಒಂದು ಫೇಸ್ ೨೩೦ ವೋಲ್ಟ್</span>
-                <span lang="en">Single Phase 230V</span>
+                <span lang="ka" id="ka">ಒಂದು ಫೇಸ್ ೨೩೦ ವೋಲ್ಟ್</span>
+                <span lang="en" id="en">Single Phase 230V</span>
                 <input type="radio" name="power" id="rdbtn1" value="230" onChange={e => setPowsup(e.target.value)} />
               </div>
 
               <div className="radioinput">
-                <span lang="ka">ಮೂರು ಫೇಸ್ ೪೧೫ ವೋಲ್ಟ್</span>
-                <span lang="en">Three Phase 415V</span>
+                <span lang="ka" id="ka">ಮೂರು ಫೇಸ್ ೪೧೫ ವೋಲ್ಟ್</span>
+                <span lang="en" id="en">Three Phase 415V</span>
                 <input type="radio" name="power" value="415" onChange={e => setPowsup(e.target.value)}/>
               </div>
 
             </div>
             <div className="formwaterpump" >
-              <h5 lang="ka">
+              <h5 lang="ka" id="ka">
                 ಒಟ್ಟು ಎಷ್ಟು ಎತ್ತರಕ್ಕೆ ನೀರನ್ನು ಎತ್ತಬೇಕು ಮೀಟರ್ಗಳಲ್ಲಿ
               </h5>
-              <h5 lang="en">Which Make Pump Required</h5>
+              <h5 lang="en" id="en">Which Make Pump Required</h5>
               &emsp;
               <select type="number" className="" onSelect={(e) => setPumpmake(e.target.value)} defaultValue={"Any Make"}>
                 <option value="Any Make">Any Make</option>
@@ -144,15 +144,15 @@ const myFunctionen = () =>{
           
 
           <div className="buttons">
-            <Button type="button" lang="en" className="btn btn-light" id="clearbtn">
+            <Button type="button" lang="en" id="en" className="btn btn-light" id="clearbtn">
               CLEAR
             </Button>
-            <Button type="button" lang="ka" className="btn btn-light" id="clearbtn">
+            <Button type="button" lang="ka" id="ka" className="btn btn-light" id="clearbtn">
               ಅಳಿಸಿಹಾಕು
             </Button>
             <Button
               type="submit"
-              lang="en"
+              lang="en" id="en"
               className="btn btn-light"
               id="searchbtn"
               name=""
@@ -163,7 +163,7 @@ const myFunctionen = () =>{
             </Button>
             <Button
               type="submit"
-              lang="ka"
+              lang="ka" id="ka"
               className="btn btn-light"
               id="searchbtn"
               onClick={getsubmit}
