@@ -7,6 +7,7 @@ import './App.css';
 import './loader'
 import 'bootstrap/dist/css/bootstrap.css';
 import Categorycard from './Categorycard';
+import Titlecard from './Titlecard';
 
 
 
@@ -14,7 +15,7 @@ function App(props) {
 
   const [lang, setLang] = useState('English')
 
-  const handleTogggle = () => {
+  const handleToggle = () => {
     if (lang === 'English'){
       setLang('Kannada')
     }
@@ -27,7 +28,7 @@ function App(props) {
   return (
     
     <div className="App">
-      { lang==='English' ? (
+      {/* { lang==='English' ? (
         <div className="productmain">
           <div className="mainheading">
             
@@ -45,10 +46,7 @@ function App(props) {
           </div>
           </div>
 
-            <div className="grid_container">
-              <Categorycard lang="English" engtitle="Sump / Open Well" kantitle="ತೊಟ್ಟಿ ಮತ್ತು ತೆರೆದ ಭಾವಿ" imgURL="https://images-na.ssl-images-amazon.com/images/I/31C9enlXjGL.jpg"/>
-              <Categorycard lang="English" engtitle="BoreWell" kantitle="ಕೊಳವೆ ಭಾವಿ" imgURL="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT5lT4VXuvOoGw8Mfrz3wph8Eg-gmtR3WwYz6LQeIE23yJAPjRYhekKJsT8pjwtGO8cVavf4tK4bocxH5O1S6NG0CNLK5i_1w&usqp=CAE"/>
-            </div>
+           
         </div>
             ) : (
         <div className="productmain">
@@ -67,14 +65,20 @@ function App(props) {
                 </div>
               </div>
           </div>
-          <div className="grid_container">
-            <Categorycard lang="Kannada" engtitle="Sump / Open Well" kantitle="ತೊಟ್ಟಿ ಮತ್ತು ತೆರೆದ ಭಾವಿ" imgURL="https://images-na.ssl-images-amazon.com/images/I/31C9enlXjGL.jpg"/>
-            <Categorycard lang="Kannada" engtitle="BoreWell" kantitle="ಕೊಳವೆ ಭಾವಿ" imgURL="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT5lT4VXuvOoGw8Mfrz3wph8Eg-gmtR3WwYz6LQeIE23yJAPjRYhekKJsT8pjwtGO8cVavf4tK4bocxH5O1S6NG0CNLK5i_1w&usqp=CAE"/>
-            </div>
           </div>
         )
-      }
-       </div>
+      } */}
+            <div className="title_container">
+              <Titlecard lang={lang} engtitle ="Water Pump Selection" kantitle="ನೀರಿನ ಪಂಪ್ ಆಯ್ಕೆ" />
+              <button id="switch-lang" onClick={handleToggle} >Switch Language</button>
+            </div>
+            <div className="grid_container">
+              <Categorycard lang={lang} engtitle="Sump / Open Well" kantitle="ತೊಟ್ಟಿ ಮತ್ತು ತೆರೆದ ಭಾವಿ" imgURL="https://images-na.ssl-images-amazon.com/images/I/31C9enlXjGL.jpg"/>
+              <Categorycard lang={lang} engtitle="BoreWell" kantitle="ಕೊಳವೆ ಭಾವಿ" imgURL="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT5lT4VXuvOoGw8Mfrz3wph8Eg-gmtR3WwYz6LQeIE23yJAPjRYhekKJsT8pjwtGO8cVavf4tK4bocxH5O1S6NG0CNLK5i_1w&usqp=CAE"/>
+            </div>
+            
+
+    </div>
   )
 }
 
