@@ -7,7 +7,7 @@ function Categorycard({lang, imgURL, engtitle, kantitle}) {
             <div className="cc__image">
                 <img src={imgURL} alt="Imageeeee" />
             </div>
-            { lang=="English" ? (
+            { lang==="English" ? (
             <>
                 <div className="cc__title">
                     <h5>{engtitle}</h5>
